@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  xscad_server:
+    build: .
+    ports:
+      - "50051:50051"  # 將主機的 50051 端口映射到容器的 50051 端口
+    environment:
+      - PYTHONUNBUFFERED=1  # 確保容器內的輸出直接寫入日誌
